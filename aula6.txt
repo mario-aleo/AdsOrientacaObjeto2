@@ -1,0 +1,34 @@
+/* Dados Variaveis Locais */
+/*
+from n in new[] {"Tom", "Dick", "Harry"}
+	where n.Length >= 4
+		orderby n.Length descending
+			select n.ToUpper()
+
+( new[] {"Tom", "Dick", "Harry"} )
+	.Where(n => n.Length >= 4)
+		.OrderByDescending(n => n.Length)
+			.Select(n => n.ToUpper())
+*/
+
+
+/* Banco SQL Server */
+/*
+tb_aluno
+	.Where(n => n.cursoId == 2)
+		.OrderBy(n => n.nome)
+			.Select(n => n)
+		
+tb_aluno
+	.Where(n => n.cursoId != 2)
+		.OrderBy(n => n.nome)
+			.Select(n => n)
+
+tb_aluno
+	.Join(tb_curso,
+	aluno => aluno.cursoId,
+	curso => curso.id,
+	(aluno, curso) => new {ID = aluno.id, Aluno = aluno.nome, Curso = curso.nome})
+		.OrderBy(x => x.Aluno)
+			.Select(x => x)
+*/
