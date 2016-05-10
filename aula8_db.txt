@@ -1,0 +1,11 @@
+create database atividades
+go
+
+use atividades
+go
+
+create table atividade (
+	id int not null identity primary key,
+	info varchar(100),
+	dtHora datetime not null default getdate()
+);
